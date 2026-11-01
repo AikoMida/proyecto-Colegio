@@ -1,0 +1,9 @@
+<h1>Lista de Cursos</h1>
+<ul>
+  {% for c in cursos %}
+    <li>{{ c.id }} - {{ c.nombre_curso }}</li>
+  {% empty %}
+    <li>No hay cursos registrados.</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'estudiantes' %}">Ver estudiantes</a>

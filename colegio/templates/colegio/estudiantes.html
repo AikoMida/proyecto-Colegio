@@ -1,0 +1,9 @@
+<h1>Lista de Estudiantes</h1>
+<ul>
+  {% for e in estudiantes %}
+    <li>{{ e.id }} - {{ e.nombre }} {{ e.apellido }}</li>
+  {% empty %}
+    <li>No hay estudiantes registrados.</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'cursos' %}">Ver cursos</a>
